@@ -1,0 +1,2200 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "Api Gestion Magasin Documentation",
+        "description": "Implementation solution de Gestion de Magasin avec Laravel",
+        "version": "1.0.0"
+    },
+    "paths": {
+        "/articles": {
+            "get": {
+                "tags": [
+                    "Affiche Articles"
+                ],
+                "summary": "Affiche la liste des articles",
+                "description": "Retourner Touts les Articles",
+                "operationId": "Affiche Article",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation",
+                        "content": {
+                            "application/json": {}
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthenticated"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "400": {
+                        "description": "Bad Request"
+                    },
+                    "404": {
+                        "description": "not found"
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "Ajouter Article"
+                ],
+                "summary": "Ajoute   Article",
+                "description": "Ajouter  Article et Retourne les Valeurs Ajouter",
+                "operationId": "Store Article",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation",
+                        "content": {
+                            "application/json": {}
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthenticated"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "400": {
+                        "description": "Bad Request"
+                    },
+                    "404": {
+                        "description": "not found"
+                    }
+                }
+            }
+        },
+        "/articles/{article}": {
+            "get": {
+                "tags": [
+                    "Affiche Article par ID"
+                ],
+                "summary": "Affiche l'Article par ID",
+                "description": "Retourner l'Article",
+                "operationId": "Show Article",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation",
+                        "content": {
+                            "application/json": {}
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthenticated"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "400": {
+                        "description": "Bad Request"
+                    },
+                    "404": {
+                        "description": "not found"
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "Mise en Jour  Article"
+                ],
+                "summary": "Modifier   Article",
+                "description": "Retourner Article Modifier",
+                "operationId": "Modifier Article",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation",
+                        "content": {
+                            "application/json": {}
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthenticated"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "400": {
+                        "description": "Bad Request"
+                    },
+                    "404": {
+                        "description": "not found"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "Supprimer Article"
+                ],
+                "summary": "Supprimer une Article",
+                "description": "Supprimer une Article",
+                "operationId": "Delete Article",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation",
+                        "content": {
+                            "application/json": {}
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthenticated"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "400": {
+                        "description": "Bad Request"
+                    },
+                    "404": {
+                        "description": "not found"
+                    }
+                }
+            }
+        },
+        "/categories": {
+            "get": {
+                "tags": [
+                    "Affiche Categories"
+                ],
+                "summary": "Affiche la liste des categories",
+                "description": "Retourner Touts les Categories",
+                "operationId": "Affiche Categorie",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation",
+                        "content": {
+                            "application/json": {}
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthenticated"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "400": {
+                        "description": "Bad Request"
+                    },
+                    "404": {
+                        "description": "not found"
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "Ajouter Categorie"
+                ],
+                "summary": "Ajoute  Categorie Article",
+                "description": "Ajouter Categorie Article et Retourne les Valeurs Ajouter",
+                "operationId": "Store Categorie",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation",
+                        "content": {
+                            "application/json": {}
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthenticated"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "400": {
+                        "description": "Bad Request"
+                    },
+                    "404": {
+                        "description": "not found"
+                    }
+                }
+            }
+        },
+        "/categories/{categorie}": {
+            "get": {
+                "tags": [
+                    "Affiche Categorie par ID"
+                ],
+                "summary": "Affiche l'Categorie par ID",
+                "description": "Retourner l'Categorie",
+                "operationId": "Show Categorie",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation",
+                        "content": {
+                            "application/json": {}
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthenticated"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "400": {
+                        "description": "Bad Request"
+                    },
+                    "404": {
+                        "description": "not found"
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "Mise en Jour Categorie Article"
+                ],
+                "summary": "Modifier  Categorie Article",
+                "description": "Retourner Categorie Modifier",
+                "operationId": "Modifier Categorie",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation",
+                        "content": {
+                            "application/json": {}
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthenticated"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "400": {
+                        "description": "Bad Request"
+                    },
+                    "404": {
+                        "description": "not found"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "Supprimer Categorie"
+                ],
+                "summary": "Supprimer une Categorie",
+                "description": "Supprimer une Categorie",
+                "operationId": "Delete Categorie",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation",
+                        "content": {
+                            "application/json": {}
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthenticated"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "400": {
+                        "description": "Bad Request"
+                    },
+                    "404": {
+                        "description": "not found"
+                    }
+                }
+            }
+        },
+        "/clients": {
+            "get": {
+                "tags": [
+                    "Affiche Clients"
+                ],
+                "summary": "Affiche la liste des Clients",
+                "description": "Retourner Touts les Clients",
+                "operationId": "Affiche Clients",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation",
+                        "content": {
+                            "application/json": {}
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthenticated"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "400": {
+                        "description": "Bad Request"
+                    },
+                    "404": {
+                        "description": "not found"
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "Ajouter Client"
+                ],
+                "summary": "Ajoute Client",
+                "description": "Ajouter  Client et Retourne les Valeurs Ajouter",
+                "operationId": "Store Client",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation",
+                        "content": {
+                            "application/json": {}
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthenticated"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "400": {
+                        "description": "Bad Request"
+                    },
+                    "404": {
+                        "description": "not found"
+                    }
+                }
+            }
+        },
+        "/clients/{client}": {
+            "get": {
+                "tags": [
+                    "Affiche Client par ID"
+                ],
+                "summary": "Affiche le Client par ID",
+                "description": "Retourner le Client",
+                "operationId": "Show Client",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation",
+                        "content": {
+                            "application/json": {}
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthenticated"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "400": {
+                        "description": "Bad Request"
+                    },
+                    "404": {
+                        "description": "not found"
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "Mise en Jour Client"
+                ],
+                "summary": "Modifier Client",
+                "description": "Retourner Client Modifier",
+                "operationId": "Modifier Client",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation",
+                        "content": {
+                            "application/json": {}
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthenticated"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "400": {
+                        "description": "Bad Request"
+                    },
+                    "404": {
+                        "description": "not found"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "Supprimer Client"
+                ],
+                "summary": "Supprimer un Client",
+                "description": "Supprimer un Client",
+                "operationId": "Delete Client",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation",
+                        "content": {
+                            "application/json": {}
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthenticated"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "400": {
+                        "description": "Bad Request"
+                    },
+                    "404": {
+                        "description": "not found"
+                    }
+                }
+            }
+        },
+        "/commandeachats": {
+            "get": {
+                "tags": [
+                    "Affiche Commandeachats et Lignecommandeachats"
+                ],
+                "summary": "Affiche la liste des Commandeachats et Lignecommandeachats",
+                "description": "Retourner Touts les Commandeachats et Lignecommandeachats",
+                "operationId": "Affiche Commandeachats et Lignecommandeachats",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation",
+                        "content": {
+                            "application/json": {}
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthenticated"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "400": {
+                        "description": "Bad Request"
+                    },
+                    "404": {
+                        "description": "not found"
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "Ajouter Commandeachats et Lignecommandeachats"
+                ],
+                "summary": "Ajoute Commandeachats et Lignecommandeachats",
+                "description": "Ajouter  Commandeachats et Lignecommandeachats et Retourne les Valeurs Ajouter",
+                "operationId": "Store Commandeachats et Lignecommandeachats",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation",
+                        "content": {
+                            "application/json": {}
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthenticated"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "400": {
+                        "description": "Bad Request"
+                    },
+                    "404": {
+                        "description": "not found"
+                    }
+                }
+            }
+        },
+        "/commandeachats/{commandeachat}": {
+            "get": {
+                "tags": [
+                    "Affiche Commandeachat et Lignecommandeachat par ID"
+                ],
+                "summary": "Affiche le Commandeachat et Lignecommandeachat par ID",
+                "description": "Retourner le Commandeachat et Lignecommandeachat",
+                "operationId": "Show Commandeachat et Lignecommandeachat",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation",
+                        "content": {
+                            "application/json": {}
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthenticated"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "400": {
+                        "description": "Bad Request"
+                    },
+                    "404": {
+                        "description": "not found"
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "Mise en Jour Commandeachat et Lignecommandeachat"
+                ],
+                "summary": "Modifier Commandeachat et Lignecommandeachat",
+                "description": "Retourner Commandeachat et Lignecommandeachat Modifier",
+                "operationId": "Modifier Commandeachat et Lignecommandeachat",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation",
+                        "content": {
+                            "application/json": {}
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthenticated"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "400": {
+                        "description": "Bad Request"
+                    },
+                    "404": {
+                        "description": "not found"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "Supprimer Commandeachat et Lignecommandeachat"
+                ],
+                "summary": "Supprimer un Commandeachat et Lignecommandeachat",
+                "description": "Supprimer un Commandeachat et Lignecommandeachat",
+                "operationId": "Delete Commandeachat et Lignecommandeachat",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation",
+                        "content": {
+                            "application/json": {}
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthenticated"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "400": {
+                        "description": "Bad Request"
+                    },
+                    "404": {
+                        "description": "not found"
+                    }
+                }
+            }
+        },
+        "/commandeclients": {
+            "get": {
+                "tags": [
+                    "Affiche Commandeclients et Lignecommandeclients"
+                ],
+                "summary": "Affiche la liste des Commandeclients et Lignecommandeclients",
+                "description": "Retourner Touts les Commandeclients et Lignecommandeclients",
+                "operationId": "Affiche Commandeclients et Lignecommandeclients",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation",
+                        "content": {
+                            "application/json": {}
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthenticated"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "400": {
+                        "description": "Bad Request"
+                    },
+                    "404": {
+                        "description": "not found"
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "Ajouter Commandeclients et Lignecommandeclients"
+                ],
+                "summary": "Ajoute Commandeclients et Lignecommandeclients",
+                "description": "Ajouter  Commandeclients et Lignecommandeclients et Retourne les Valeurs Ajouter",
+                "operationId": "Store Commandeclients et Lignecommandeclients",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation",
+                        "content": {
+                            "application/json": {}
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthenticated"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "400": {
+                        "description": "Bad Request"
+                    },
+                    "404": {
+                        "description": "not found"
+                    }
+                }
+            }
+        },
+        "/commandeclients/{commandeclient}": {
+            "get": {
+                "tags": [
+                    "Affiche Commandeclient et Lignecommandeclient par ID"
+                ],
+                "summary": "Affiche le Commandeclient et Lignecommandeclient par ID",
+                "description": "Retourner le Commandeclient et Lignecommandeclient",
+                "operationId": "Show Commandeclient et Lignecommandeclient",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation",
+                        "content": {
+                            "application/json": {}
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthenticated"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "400": {
+                        "description": "Bad Request"
+                    },
+                    "404": {
+                        "description": "not found"
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "Mise en Jour Commandeclient et Lignecommandeclient"
+                ],
+                "summary": "Modifier Commandeclient et Lignecommandeclient",
+                "description": "Retourner Commandeclient et Lignecommandeclient Modifier",
+                "operationId": "Modifier Commandeclient et Lignecommandeclient",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation",
+                        "content": {
+                            "application/json": {}
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthenticated"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "400": {
+                        "description": "Bad Request"
+                    },
+                    "404": {
+                        "description": "not found"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "Supprimer Commandeclient et Lignecommandeclient"
+                ],
+                "summary": "Supprimer un Commandeclient et Lignecommandeclient",
+                "description": "Supprimer un Commandeclient et Lignecommandeclient",
+                "operationId": "Delete Commandeclient et Lignecommandeclient",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation",
+                        "content": {
+                            "application/json": {}
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthenticated"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "400": {
+                        "description": "Bad Request"
+                    },
+                    "404": {
+                        "description": "not found"
+                    }
+                }
+            }
+        },
+        "/devis": {
+            "get": {
+                "tags": [
+                    "Affiche devis et lignedevis"
+                ],
+                "summary": "Affiche la liste des devis et lignedevis",
+                "description": "Retourner Touts les devis et lignedevis",
+                "operationId": "Affiche devis et lignedevis",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation",
+                        "content": {
+                            "application/json": {}
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthenticated"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "400": {
+                        "description": "Bad Request"
+                    },
+                    "404": {
+                        "description": "not found"
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "Ajouter devis et lignedevis"
+                ],
+                "summary": "Ajoute devis et lignedevis",
+                "description": "Ajouter  devis et lignedevis et Retourne les Valeurs Ajouter",
+                "operationId": "Store devis et lignedevis",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation",
+                        "content": {
+                            "application/json": {}
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthenticated"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "400": {
+                        "description": "Bad Request"
+                    },
+                    "404": {
+                        "description": "not found"
+                    }
+                }
+            }
+        },
+        "/devis/{devis}": {
+            "get": {
+                "tags": [
+                    "Affiche devis et lignedevis par ID"
+                ],
+                "summary": "Affiche le devis et lignedevis par ID",
+                "description": "Retourner le devis et lignedevis",
+                "operationId": "Show devis et lignedevis",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation",
+                        "content": {
+                            "application/json": {}
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthenticated"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "400": {
+                        "description": "Bad Request"
+                    },
+                    "404": {
+                        "description": "not found"
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "Mise en Jour devis et lignedevis"
+                ],
+                "summary": "Modifier devis et lignedevis",
+                "description": "Retourner devis et lignedevis Modifier",
+                "operationId": "Modifier devis et lignedevis",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation",
+                        "content": {
+                            "application/json": {}
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthenticated"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "400": {
+                        "description": "Bad Request"
+                    },
+                    "404": {
+                        "description": "not found"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "Supprimer devis et lignedevis"
+                ],
+                "summary": "Supprimer un devis et lignedevis",
+                "description": "Supprimer un devis et lignedevis",
+                "operationId": "Delete devis et lignedevis",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation",
+                        "content": {
+                            "application/json": {}
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthenticated"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "400": {
+                        "description": "Bad Request"
+                    },
+                    "404": {
+                        "description": "not found"
+                    }
+                }
+            }
+        },
+        "/facturefournisseurs": {
+            "get": {
+                "tags": [
+                    "Affiche  Facture de Fournisseurs"
+                ],
+                "summary": "Affiche la liste des Facture de Fournisseurs",
+                "description": "Retourner Touts les Facture de Fournisseurs",
+                "operationId": "Affiche Facture de Fournisseurs",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation",
+                        "content": {
+                            "application/json": {}
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthenticated"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "400": {
+                        "description": "Bad Request"
+                    },
+                    "404": {
+                        "description": "not found"
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "Ajouter Facture de Fournisseur"
+                ],
+                "summary": "Ajoute Facture de Fournisseurs",
+                "description": "Ajouter  Facture de Fournisseur et Retourne les Valeurs Ajouter",
+                "operationId": "Store Facture de Fournisseur",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation",
+                        "content": {
+                            "application/json": {}
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthenticated"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "400": {
+                        "description": "Bad Request"
+                    },
+                    "404": {
+                        "description": "not found"
+                    }
+                }
+            }
+        },
+        "/facturefournisseurs/{facturefournisseur}": {
+            "get": {
+                "tags": [
+                    "Affiche Facture de Fournisseur par ID"
+                ],
+                "summary": "Affiche le Facture de Fournisseur par ID",
+                "description": "Retourner le Facture de Fournisseur",
+                "operationId": "Show Facture de Fournisseur",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation",
+                        "content": {
+                            "application/json": {}
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthenticated"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "400": {
+                        "description": "Bad Request"
+                    },
+                    "404": {
+                        "description": "not found"
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "Mise en Jour Facture et Lignefacture"
+                ],
+                "summary": "Modifier Facture et Lignefacture",
+                "description": "Retourner Facture et Lignefacture Modifier",
+                "operationId": "Modifier Facture et Lignefacture",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation",
+                        "content": {
+                            "application/json": {}
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthenticated"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "400": {
+                        "description": "Bad Request"
+                    },
+                    "404": {
+                        "description": "not found"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "Supprimer Facture et Lignefacture"
+                ],
+                "summary": "Supprimer un Facture et Lignefacture",
+                "description": "Supprimer un Facture et Lignefacture",
+                "operationId": "Delete Facture et Lignefacture",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation",
+                        "content": {
+                            "application/json": {}
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthenticated"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "400": {
+                        "description": "Bad Request"
+                    },
+                    "404": {
+                        "description": "not found"
+                    }
+                }
+            }
+        },
+        "/factureclients": {
+            "get": {
+                "tags": [
+                    "Affiche  Facture de clients"
+                ],
+                "summary": "Affiche la liste des Facture de clients",
+                "description": "Retourner Touts les Facture de clients",
+                "operationId": "Affiche Facture de clients",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation",
+                        "content": {
+                            "application/json": {}
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthenticated"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "400": {
+                        "description": "Bad Request"
+                    },
+                    "404": {
+                        "description": "not found"
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "Ajouter Facture de client"
+                ],
+                "summary": "Ajoute Facture de clients",
+                "description": "Ajouter  Facture de client et Retourne les Valeurs Ajouter",
+                "operationId": "Store Facture de client",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation",
+                        "content": {
+                            "application/json": {}
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthenticated"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "400": {
+                        "description": "Bad Request"
+                    },
+                    "404": {
+                        "description": "not found"
+                    }
+                }
+            }
+        },
+        "/factureclients/{factureclient}": {
+            "get": {
+                "tags": [
+                    "Affiche Facture de client par ID"
+                ],
+                "summary": "Affiche le Facture de client par ID",
+                "description": "Retourner le Facture de client",
+                "operationId": "Show Facture de client",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation",
+                        "content": {
+                            "application/json": {}
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthenticated"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "400": {
+                        "description": "Bad Request"
+                    },
+                    "404": {
+                        "description": "not found"
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "Mise en Jour Facture et Lignefacture"
+                ],
+                "summary": "Modifier Facture et Lignefacture",
+                "description": "Retourner Facture et Lignefacture Modifier",
+                "operationId": "Modifier Facture Client et Lignefacture Client",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation",
+                        "content": {
+                            "application/json": {}
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthenticated"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "400": {
+                        "description": "Bad Request"
+                    },
+                    "404": {
+                        "description": "not found"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "Supprimer Facture et Lignefacture"
+                ],
+                "summary": "Supprimer un Facture et Lignefacture",
+                "description": "Supprimer un Facture et Lignefacture",
+                "operationId": "Delete Facture Client et Lignefacture Client",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation",
+                        "content": {
+                            "application/json": {}
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthenticated"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "400": {
+                        "description": "Bad Request"
+                    },
+                    "404": {
+                        "description": "not found"
+                    }
+                }
+            }
+        },
+        "/fournisseurs": {
+            "get": {
+                "tags": [
+                    "Affiche Fournisseurs"
+                ],
+                "summary": "Affiche la liste des Fournisseurs",
+                "description": "Retourner Touts les Fournisseurs",
+                "operationId": "Affiche Fournisseurs",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation",
+                        "content": {
+                            "application/json": {}
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthenticated"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "400": {
+                        "description": "Bad Request"
+                    },
+                    "404": {
+                        "description": "not found"
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "Ajouter Fournisseur"
+                ],
+                "summary": "Ajoute Fournisseur",
+                "description": "Ajouter  Fournisseur et Retourne les Valeurs Ajouter",
+                "operationId": "Store Fournisseur",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation",
+                        "content": {
+                            "application/json": {}
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthenticated"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "400": {
+                        "description": "Bad Request"
+                    },
+                    "404": {
+                        "description": "not found"
+                    }
+                }
+            }
+        },
+        "/fournisseurs/{fournisseur}": {
+            "get": {
+                "tags": [
+                    "Affiche Fournisseur par ID"
+                ],
+                "summary": "Affiche le Fournisseur par ID",
+                "description": "Retourner le Fournisseur",
+                "operationId": "Show Fournisseur",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation",
+                        "content": {
+                            "application/json": {}
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthenticated"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "400": {
+                        "description": "Bad Request"
+                    },
+                    "404": {
+                        "description": "not found"
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "Mise en Jour Fournisseur"
+                ],
+                "summary": "Modifier Fournisseur",
+                "description": "Retourner Fournisseur Modifier",
+                "operationId": "Modifier Fournisseur",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation",
+                        "content": {
+                            "application/json": {}
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthenticated"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "400": {
+                        "description": "Bad Request"
+                    },
+                    "404": {
+                        "description": "not found"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "Supprimer Fournisseur"
+                ],
+                "summary": "Supprimer un Fournisseur",
+                "description": "Supprimer un Fournisseur",
+                "operationId": "Delete Fournisseur",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation",
+                        "content": {
+                            "application/json": {}
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthenticated"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "400": {
+                        "description": "Bad Request"
+                    },
+                    "404": {
+                        "description": "not found"
+                    }
+                }
+            }
+        },
+        "/livraisons": {
+            "get": {
+                "tags": [
+                    "Affiche livraisons et Lignelivraisons"
+                ],
+                "summary": "Affiche la liste des livraisons et Lignelivraisons",
+                "description": "Retourner Touts les livraisons et Lignelivraisons",
+                "operationId": "Affiche livraisons et Lignelivraisons",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation",
+                        "content": {
+                            "application/json": {}
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthenticated"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "400": {
+                        "description": "Bad Request"
+                    },
+                    "404": {
+                        "description": "not found"
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "Ajouter livraisons et Lignelivraisons"
+                ],
+                "summary": "Ajoute livraisons et Lignelivraisons",
+                "description": "Ajouter  livraisons et Lignelivraisons et Retourne les Valeurs Ajouter",
+                "operationId": "Store livraisons et Lignelivraisons",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation",
+                        "content": {
+                            "application/json": {}
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthenticated"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "400": {
+                        "description": "Bad Request"
+                    },
+                    "404": {
+                        "description": "not found"
+                    }
+                }
+            }
+        },
+        "/livraisons/{livraison}": {
+            "get": {
+                "tags": [
+                    "Affiche livraison et Lignelivraison par ID"
+                ],
+                "summary": "Affiche le Commandeachat et Lignecommandeachat par ID",
+                "description": "Retourner le livraison et Lignelivraison",
+                "operationId": "Show livraison et Lignelivraison",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation",
+                        "content": {
+                            "application/json": {}
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthenticated"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "400": {
+                        "description": "Bad Request"
+                    },
+                    "404": {
+                        "description": "not found"
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "Mise en Jour livraison et Lignelivraison"
+                ],
+                "summary": "Modifier livraison et Lignelivraison",
+                "description": "Retourner livraison et Lignelivraison Modifier",
+                "operationId": "Modifier livraison et Lignelivraison",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation",
+                        "content": {
+                            "application/json": {}
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthenticated"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "400": {
+                        "description": "Bad Request"
+                    },
+                    "404": {
+                        "description": "not found"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "Supprimer livraison et Lignelivraison"
+                ],
+                "summary": "Supprimer un livraison et Lignelivraison",
+                "description": "Supprimer un livraison et Lignelivraison",
+                "operationId": "Delete livraison et Lignelivraison",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation",
+                        "content": {
+                            "application/json": {}
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthenticated"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "400": {
+                        "description": "Bad Request"
+                    },
+                    "404": {
+                        "description": "not found"
+                    }
+                }
+            }
+        },
+        "/receptions": {
+            "get": {
+                "tags": [
+                    "Affiche Receptions et Lignereceptions"
+                ],
+                "summary": "Affiche la liste des Receptions et Lignereceptions",
+                "description": "Retourner Touts les Receptions et Lignereceptions",
+                "operationId": "Affiche Receptions et Lignereceptions",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation",
+                        "content": {
+                            "application/json": {}
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthenticated"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "400": {
+                        "description": "Bad Request"
+                    },
+                    "404": {
+                        "description": "not found"
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "Ajouter Receptions et Lignereceptions"
+                ],
+                "summary": "Ajoute Receptions et Lignereceptions",
+                "description": "Ajouter  Receptions et Lignereceptions et Retourne les Valeurs Ajouter",
+                "operationId": "Store Receptions et Lignereceptions",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation",
+                        "content": {
+                            "application/json": {}
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthenticated"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "400": {
+                        "description": "Bad Request"
+                    },
+                    "404": {
+                        "description": "not found"
+                    }
+                }
+            }
+        },
+        "/receptions/{reception}": {
+            "get": {
+                "tags": [
+                    "Affiche Reception et Lignereception par ID"
+                ],
+                "summary": "Affiche le Commandeachat et Lignecommandeachat par ID",
+                "description": "Retourner le Reception et Lignereception",
+                "operationId": "Show Reception et Lignereception",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation",
+                        "content": {
+                            "application/json": {}
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthenticated"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "400": {
+                        "description": "Bad Request"
+                    },
+                    "404": {
+                        "description": "not found"
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "Mise en Jour Reception et Lignereception"
+                ],
+                "summary": "Modifier Reception et Lignereception",
+                "description": "Retourner Reception et Lignereception Modifier",
+                "operationId": "Modifier Reception et Lignereception",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation",
+                        "content": {
+                            "application/json": {}
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthenticated"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "400": {
+                        "description": "Bad Request"
+                    },
+                    "404": {
+                        "description": "not found"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "Supprimer Reception et Lignereception"
+                ],
+                "summary": "Supprimer un Reception et Lignereception",
+                "description": "Supprimer un reception et Lignereception",
+                "operationId": "Delete Reception et Lignereception",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation",
+                        "content": {
+                            "application/json": {}
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthenticated"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "400": {
+                        "description": "Bad Request"
+                    },
+                    "404": {
+                        "description": "not found"
+                    }
+                }
+            }
+        },
+        "/reglementfournisseurs": {
+            "get": {
+                "tags": [
+                    "Affiche Reglement de Fournisseur"
+                ],
+                "summary": "Affiche la liste des Reglements de Fournisseurs",
+                "description": "Retourner Touts les Reglement de Fournisseurs",
+                "operationId": "Affiche Reglement de Fournisseurs",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation",
+                        "content": {
+                            "application/json": {}
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthenticated"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "400": {
+                        "description": "Bad Request"
+                    },
+                    "404": {
+                        "description": "not found"
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "Ajouter Reglement Fournisseur"
+                ],
+                "summary": "Ajoute Reglement Fournisseur",
+                "description": "Ajouter  Reglement Fournisseur et Retourne les Valeurs Ajouter",
+                "operationId": "Store Reglement Fournisseur",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation",
+                        "content": {
+                            "application/json": {}
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthenticated"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "400": {
+                        "description": "Bad Request"
+                    },
+                    "404": {
+                        "description": "not found"
+                    }
+                }
+            }
+        },
+        "/reglementfournisseurs/{reglementfournisseur}": {
+            "get": {
+                "tags": [
+                    "Affiche Reglement de Fournisseur par ID"
+                ],
+                "summary": "Affiche leReglement de Fournisseur par ID",
+                "description": "Retourner le Reglement de Fournisseur",
+                "operationId": "Show Reglement de Fournisseur",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation",
+                        "content": {
+                            "application/json": {}
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthenticated"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "400": {
+                        "description": "Bad Request"
+                    },
+                    "404": {
+                        "description": "not found"
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "Mise en Jour Reglement de Fournisseur"
+                ],
+                "summary": "Modifier Reglement de Fournisseur",
+                "description": "Retourner Reglement de Fournisseur Modifier",
+                "operationId": "Modifier Reglement de Fournisseur",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation",
+                        "content": {
+                            "application/json": {}
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthenticated"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "400": {
+                        "description": "Bad Request"
+                    },
+                    "404": {
+                        "description": "not found"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "Supprimer Reglement de Fournisseur"
+                ],
+                "summary": "Supprimer un Reglement de Fournisseur",
+                "description": "Supprimer un Reglement de Fournisseur",
+                "operationId": "Delete Reglement de Fournisseur",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation",
+                        "content": {
+                            "application/json": {}
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthenticated"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "400": {
+                        "description": "Bad Request"
+                    },
+                    "404": {
+                        "description": "not found"
+                    }
+                }
+            }
+        },
+        "/reglementclients": {
+            "get": {
+                "tags": [
+                    "Affiche Reglement de client"
+                ],
+                "summary": "Affiche la liste des Reglements de clients",
+                "description": "Retourner Touts les Reglement de clients",
+                "operationId": "Affiche Reglement de clients",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation",
+                        "content": {
+                            "application/json": {}
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthenticated"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "400": {
+                        "description": "Bad Request"
+                    },
+                    "404": {
+                        "description": "not found"
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "Ajouter Reglement client"
+                ],
+                "summary": "Ajoute Reglement client",
+                "description": "Ajouter  Reglement client et Retourne les Valeurs Ajouter",
+                "operationId": "Store Reglement client",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation",
+                        "content": {
+                            "application/json": {}
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthenticated"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "400": {
+                        "description": "Bad Request"
+                    },
+                    "404": {
+                        "description": "not found"
+                    }
+                }
+            }
+        },
+        "/reglementclients/{reglementclient}": {
+            "get": {
+                "tags": [
+                    "Affiche Reglement de client par ID"
+                ],
+                "summary": "Affiche leReglement de client par ID",
+                "description": "Retourner le Reglement de client",
+                "operationId": "Show Reglement de client",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation",
+                        "content": {
+                            "application/json": {}
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthenticated"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "400": {
+                        "description": "Bad Request"
+                    },
+                    "404": {
+                        "description": "not found"
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "Mise en Jour Reglement de client"
+                ],
+                "summary": "Modifier Reglement de client",
+                "description": "Retourner Reglement de client Modifier",
+                "operationId": "Modifier Reglement de client",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation",
+                        "content": {
+                            "application/json": {}
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthenticated"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "400": {
+                        "description": "Bad Request"
+                    },
+                    "404": {
+                        "description": "not found"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "Supprimer Reglement de client"
+                ],
+                "summary": "Supprimer un Reglement de client",
+                "description": "Supprimer un Reglement de client",
+                "operationId": "Delete Reglement de client",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation",
+                        "content": {
+                            "application/json": {}
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthenticated"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "400": {
+                        "description": "Bad Request"
+                    },
+                    "404": {
+                        "description": "not found"
+                    }
+                }
+            }
+        },
+        "/unites": {
+            "get": {
+                "tags": [
+                    "Affiche Unites"
+                ],
+                "summary": "Affiche la liste des unites",
+                "description": "Retourner Touts les Unites",
+                "operationId": "affiche unites",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation",
+                        "content": {
+                            "application/json": {}
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthenticated"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "400": {
+                        "description": "Bad Request"
+                    },
+                    "404": {
+                        "description": "not found"
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "Ajouter Unite"
+                ],
+                "summary": "Ajoute Unite Article",
+                "description": "Ajouter Unite Article et Retourne les Valeurs Ajouter",
+                "operationId": "Store Unite",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation",
+                        "content": {
+                            "application/json": {}
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthenticated"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "400": {
+                        "description": "Bad Request"
+                    },
+                    "404": {
+                        "description": "not found"
+                    }
+                }
+            }
+        },
+        "/unites/{unite}": {
+            "get": {
+                "tags": [
+                    "Affiche Unite par ID"
+                ],
+                "summary": "Affiche l'unite par ID",
+                "description": "Retourner l'Unite",
+                "operationId": "Show Unite",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation",
+                        "content": {
+                            "application/json": {}
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthenticated"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "400": {
+                        "description": "Bad Request"
+                    },
+                    "404": {
+                        "description": "not found"
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "Mise en Jour Unite Article"
+                ],
+                "summary": "Modifier  unite Article",
+                "description": "Retourner Unite Modifier",
+                "operationId": "Modifier Unite",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation",
+                        "content": {
+                            "application/json": {}
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthenticated"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "400": {
+                        "description": "Bad Request"
+                    },
+                    "404": {
+                        "description": "not found"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "Supprimer Unite"
+                ],
+                "summary": "Supprimer une unite",
+                "description": "Supprimer une Unite",
+                "operationId": "Delete Unite",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation",
+                        "content": {
+                            "application/json": {}
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthenticated"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "400": {
+                        "description": "Bad Request"
+                    },
+                    "404": {
+                        "description": "not found"
+                    }
+                }
+            }
+        },
+        "/utilisateurs": {
+            "get": {
+                "tags": [
+                    "Affiche utilisateurs"
+                ],
+                "summary": "Affiche la liste des utilisateurs",
+                "description": "Retourner Touts les utilisateurs",
+                "operationId": "Affiche utilisateurs",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation",
+                        "content": {
+                            "application/json": {}
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthenticated"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "400": {
+                        "description": "Bad Request"
+                    },
+                    "404": {
+                        "description": "not found"
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "Ajouter utilisateur"
+                ],
+                "summary": "Ajoute utilisateur",
+                "description": "Ajouter  utilisateur et Retourne les Valeurs Ajouter",
+                "operationId": "Store utilisateur",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation",
+                        "content": {
+                            "application/json": {}
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthenticated"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "400": {
+                        "description": "Bad Request"
+                    },
+                    "404": {
+                        "description": "not found"
+                    }
+                }
+            }
+        },
+        "/utilisateurs/{utilisateur}": {
+            "get": {
+                "tags": [
+                    "Affiche utilisateur par ID"
+                ],
+                "summary": "Affiche le utilisateur par ID",
+                "description": "Retourner le utilisateur",
+                "operationId": "Show utilisateur",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation",
+                        "content": {
+                            "application/json": {}
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthenticated"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "400": {
+                        "description": "Bad Request"
+                    },
+                    "404": {
+                        "description": "not found"
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "Mise en Jour utilisateur"
+                ],
+                "summary": "Modifier utilisateur",
+                "description": "Retourner utilisateur Modifier",
+                "operationId": "Modifier utilisateur",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation",
+                        "content": {
+                            "application/json": {}
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthenticated"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "400": {
+                        "description": "Bad Request"
+                    },
+                    "404": {
+                        "description": "not found"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "Supprimer utilisateur"
+                ],
+                "summary": "Supprimer un utilisateur",
+                "description": "Supprimer un utilisateur",
+                "operationId": "Delete utilisateur",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation",
+                        "content": {
+                            "application/json": {}
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthenticated"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "400": {
+                        "description": "Bad Request"
+                    },
+                    "404": {
+                        "description": "not found"
+                    }
+                }
+            }
+        },
+        "/connexion": {
+            "post": {
+                "tags": [
+                    "Connexion utilisateur"
+                ],
+                "summary": "Connexion utilisateur",
+                "description": "Connexion  utilisateur et Retourne les Valeurs Ajouter",
+                "operationId": "Connexion utilisateur",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation",
+                        "content": {
+                            "application/json": {}
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthenticated"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "400": {
+                        "description": "Bad Request"
+                    },
+                    "404": {
+                        "description": "not found"
+                    }
+                }
+            }
+        }
+    }
+}
